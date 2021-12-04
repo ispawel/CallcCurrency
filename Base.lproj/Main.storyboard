@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ta4-tE-Dm7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s2L-Mw-diz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,25 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="T3H-qa-SUC">
-            <objects>
-                <tabBarController id="Ta4-tE-Dm7" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qlj-HS-KGu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="s2L-Mw-diz" kind="relationship" relationship="viewControllers" id="edL-tf-tJ3"/>
-                        <segue destination="ija-kD-lVX" kind="relationship" relationship="viewControllers" id="Cjg-fH-O31"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gIt-Kv-Pnv"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9vR-CG-E2L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1578" y="-350"/>
-        </scene>
         <!--VC1-->
         <scene sceneID="hub-vW-Wds">
             <objects>
@@ -48,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-gH-Qgv">
-                                <rect key="frame" x="145.5" y="302" width="123" height="31"/>
+                                <rect key="frame" x="145.5" y="351" width="123" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="iZg-Kl-pKE"/>
                                 </constraints>
@@ -282,6 +263,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj2-J5-dUE">
+                                <rect key="frame" x="20" y="274" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -322,6 +310,7 @@
                         <outlet property="inTypeCurrLabel" destination="Ald-7O-Sz5" id="AY1-a5-eqq"/>
                         <outlet property="outLabel" destination="Gba-9D-RjH" id="0ho-je-DdD"/>
                         <outlet property="outTypeCurrLabel" destination="NDC-Bm-FQh" id="9Ra-1I-605"/>
+                        <outlet property="warningLabel" destination="nj2-J5-dUE" id="oXS-gv-Zro"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -329,10 +318,6 @@
             <point key="canvasLocation" x="-800.00000000000011" y="399.77678571428572"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="sB5-tS-ePT"/>
-        <segue reference="wDy-r3-XVs"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

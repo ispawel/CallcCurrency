@@ -296,12 +296,10 @@ case ("Японских иен"):
         valueRatio =  62.9624
         id =  "R01820"
 default:
-        name = "Change Currency"
-        }
+        valueRatio =  0.1
+    
+        }//switch
         
-        
-        
-       
         return valueRatio
     }
 

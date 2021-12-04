@@ -30,35 +30,21 @@ open class EnterValueVC: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
+
    
     //Метод скрытия клавиатуры
     func addTapGestureToHideKeyboard() {
             let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
             view.addGestureRecognizer(tapGesture)
         }
+   
     func tapGesture() {
             currTextFiled.resignFirstResponder()
         }
 
-    
-    
-    
-    
-    //Кнопка загрузки введенных даных
-    @IBAction func uploadBtn(_ sender: UIButton) {
-    }
-   
-    
-    
-    
+     
     @IBAction func toChangeCurrBtn(_ sender: UIButton) {
     }
-    
-    
 }
 
+var enterCalueVC = EnterValueVC()

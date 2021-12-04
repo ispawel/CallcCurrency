@@ -24,10 +24,10 @@ open class CalcVC: UIViewController {
     @IBOutlet weak var outTypeCurrLabel: UILabel!
     var textOfOutTypeCurrLabel: String = ""
 
-
+  
+    @IBOutlet weak var warningLabel: UILabel!
     
     var result: Double = 0.0
-    
     
     
     open override func viewDidLoad() {
@@ -36,23 +36,35 @@ open class CalcVC: UIViewController {
         inLabel.text = textOfInLabelCalc
         inTypeCurrLabel.text = textOfInTypeCurrLabel
         
-        
     }
 
     
-    
+   
     
     //Кнопка конвертирования
     @IBAction func calcBtn(_ sender: UIButton) {
         
-        let valueRatio = modelCurrClass.changeCurrFunc(currencySwich: textOfInTypeCurrLabel)
-        result = Double(textOfInLabelCalc)! / valueRatio
         
-        let x = Double(round(100*result)/100)
-      
-        outLabel.text = "\(x)"
+        
+       
+        if  textOfInLabelCalc != nil {
+            
+    let valueRatio = modelCurrClass.changeCurrFunc(currencySwich: textOfInTypeCurrLabel)
+            result = Double(textOfInLabelCalc)! / valueRatio
+           
+            let x = Double(round(100*result)/100)
+          
+            outLabel.text = "\(x)"
+            
+        }else{
+            warningLabel.text = "Введите значение на первом экране"
+        }
         
         
     }
+    
+    
+    
+    
     
 }
