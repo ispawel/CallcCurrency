@@ -9,11 +9,8 @@ import UIKit
 
 open class EnterValueVC: UIViewController {
 
-    
     //Поле ввода значения
     @IBOutlet weak var currTextFiled: UITextField!
-    
-
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,29 +19,20 @@ open class EnterValueVC: UIViewController {
         addTapGestureToHideKeyboard()
        
     }
-    
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC: ChangeCurrVC = segue.destination as! ChangeCurrVC
         
         destinationVC.textOfInLabelText = currTextFiled.text!
     }
-    
-    
-
-   
     //Метод скрытия клавиатуры
     func addTapGestureToHideKeyboard() {
             let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
             view.addGestureRecognizer(tapGesture)
         }
-   
     func tapGesture() {
             currTextFiled.resignFirstResponder()
         }
-
-     
     @IBAction func toChangeCurrBtn(_ sender: UIButton) {
     }
 }
-
 var enterCalueVC = EnterValueVC()
